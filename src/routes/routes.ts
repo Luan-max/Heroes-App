@@ -1,9 +1,16 @@
-import { Router, Response, Request } from "express";
+import { Router } from "express";
 
-const routesLoader = Router();
+class RouterLoaders {
+  router: Router
 
-routesLoader.get("/", (req: Request, res: Response) => {
-  res.json("Funcionando filho da puta");
-});
+  constructor() {
+    this.router = Router();
+  }
 
-export { routesLoader };
+  load(app): void {
+
+    app.use(this.router);
+  }
+}
+
+export default new RouterLoaders();

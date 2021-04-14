@@ -1,0 +1,11 @@
+
+
+class CharacterRepository {
+  constructor() {
+
+  }
+
+  list()
+}
+
+
